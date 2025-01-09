@@ -1,0 +1,239 @@
+/* Global Styles */
+* {
+  box-sizing: border-box; /* Include padding and border in element's total width */
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 100%; /* Prevent page from exceeding viewport width */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Home Page */
+.home-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  min-height: 100vh; 
+  margin-top: 10px; /* Add space at the top to account for the navbar height */
+  background-color: #f4f4f4;
+  width: 100%; /* Ensure home page takes full width */
+  max-width: 100%; /* Prevent any maximum width from restricting layout */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+
+  /* Header Styles */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #4caf50;
+    color: white;
+    width: 100%;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-link:hover {
+    text-decoration: underline;
+  }
+  
+ /* Slideshow Container */
+.slideshow-container {
+  width: 100%; /* Ensure slideshow takes full width */
+  height: 606px; /* Adjust to your desired height */
+  overflow: hidden;
+  position: absolute; /* Position it absolutely inside the hero */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Send slideshow to the back */
+  max-width: 100%; /* Prevent overflow */
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 606px; /* Adjust height as needed */
+  background-image: url('../assets/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 100%; /* Prevent overflow */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Slideshow Image */
+.slideshow-image {
+  width: 100%; /* Ensures the image takes full width */
+  height: 100%; /* Ensures the image fills the height of the container */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  transition: opacity 1s ease-in-out;
+}
+
+/* Hero Text and Button */
+.hero h1,
+.hero p,
+.cta-button {
+  position: relative;
+  z-index: 3; /* Ensure text and button are above the slideshow */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Add text shadow for better readability */
+}
+
+.cta-button {
+  background-color: #ffffff;
+  color: #4caf50;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f9f9f9;
+}
+
+  /* Features Section */
+  .features {
+    padding: 50px 20px;
+  }
+  
+  .features h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  /* Feature Boxes */
+.feature-item {
+  background-color: black; /* Set background to black */
+  color: white; /* Set text color to white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left; /* Align text to the left for better readability */
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #FFD700; /* Golden yellow color for the heading */
+}
+
+/* Content in pointwise format */
+.feature-item p {
+  color: white; /* Content color in white */
+  font-size: 1rem;
+  list-style-type: disc; /* Bullet points */
+  padding-left: 20px; /* Indent the points */
+  margin-top: 10px; /* Add margin for spacing */
+}
+
+  
+
+  
+  /* src/components/HomePage.css */
+.home-page {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    margin-bottom: 60px; /* To make space for the fixed footer */
+  }
+  
+  .hero {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .features {
+    padding: 50px 20px;
+    width: 100%;
+    max-width: 100%; /* Prevent overflow */
+  }
+  
+  .features-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-around;
+  }
+  
+  .feature-item {
+    background-color: black; /* Set background to black */
+    color: white; /* Set text color to white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Align text to the center */
+    width: 100%;
+    max-width: 100%; /* Prevent overflow */
+  }
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #FFD700; /* Golden yellow color for the heading */
+}
+
+/* Content in pointwise format */
+.feature-item p {
+  color: white; /* Content color in white */
+  font-size: 1rem;
+  list-style-type: disc; /* Bullet points */
+  padding-left: 20px; /* Indent the points */
+  margin-top: 10px; /* Add margin for spacing */
+}
+
+
+
+
+
+
+  

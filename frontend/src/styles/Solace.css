@@ -1,0 +1,217 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Aligns content to the left */
+    justify-content: flex-start; /* Aligns content to the top */
+    min-height: 100vh;
+    width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.main .nav {
+    position: fixed; /* Fixed position for the navbar */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 66px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    padding: 20px;
+    background-color: #ffffff;
+    color: #585858;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main .nav .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;  /* Adjust the space between logo and text */
+    height: 57px;
+    width: auto;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.main .nav .logo {
+    border-radius: 50%;
+    height: 56px; /* Adjust logo size */
+    width: auto;
+}
+
+.main .nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;  /* Space between Home link and user icon */
+}
+
+.main .nav .home-link {
+    font-size: 18px;
+    color: #585858;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.main .nav .home-link:hover {
+    color: #007bff;
+}
+
+.main .nav .user-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .nav .user-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Makes the user icon round */
+}
+
+.main-container {
+    position: fixed; /* Keeps the container on the right */
+    top: 0;
+    right: 0; /* Aligns to the right edge */
+    height: 100%; /* Full height */ 
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #ffffff; /* Optional background for clarity */
+    box-shadow: -4px 0px 6px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    width: 100%;
+}
+
+.main .greet {
+    margin: 50px 0;
+    font-size: 56px;
+    color: #c4c7c5;
+    font-weight: 600;
+    text-align: center;
+}
+
+.main .greet span {
+    background: -webkit-linear-gradient(16deg, #4b90ff, #ff5546);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-bottom {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    margin-top: 40px;
+    box-sizing: border-box;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: #f0f4f9;
+    padding: 10px 20px;
+    border-radius: 50px;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 156px;
+}
+
+.search-box img {
+    width: 24px;
+    cursor: pointer;
+}
+
+.search-box input {
+    flex: 1;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 8px;
+    font-size: 18px;
+}
+
+.search-box div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.main .bottom-info {
+    font-size: 13px;
+    margin: 15px auto;
+    text-align: center;
+    font-weight: 300;
+    margin-left: 300px;
+}
+
+.result {
+    padding: 0 5%;
+    max-height: 70vh;
+    overflow-y: scroll;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.result::-webkit-scrollbar {
+    display: none;
+}
+
+.result-title {
+    margin: 40px 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.result img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.result-data {
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    width: 100%;
+}
+
+.result-data p {
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+.loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loader hr {
+    border-radius: 4px;
+    border: none;
+    background-color: #f6f7f8;
+    background: linear-gradient(to right, #b1d5ee, #c953e98a, #9ed7ff);
+    background-size: 800px 50px;
+    height: 20px;
+    animation: loader 4s infinite linear;
+}
+
+@keyframes loader {
+    0% {
+        background-position: -800px 0px;
+    }
+    100% {
+        background-position: 800px 0px;
+    }
+}
